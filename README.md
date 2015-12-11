@@ -93,10 +93,14 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 <br><https://github.com/ma-laforge/GracePlot.jl>.
  1. **EasyPlotGrace.jl** - Implements EasyPlot.jl rendering interface using Grace/xmgrace:
 <br><https://github.com/ma-laforge/EasyPlotGrace.jl>.
- 1. **EasyPlotMPL.jl** - Implements EasyPlot.jl rendering interface using Matplotlib/PyPlot:
+ 1. **EasyPlotMPL.jl** - Implements EasyPlot.jl rendering interface using Matplotlib/PyPlot/PyCall:
 <br><https://github.com/ma-laforge/EasyPlotMPL.jl>.
- 1. **EasyPlotQwt.jl** - Implements EasyPlot.jl rendering interface using Matplotlib/PyPlot:
+ 1. **EasyPlotQwt.jl** - Implements EasyPlot.jl rendering interface using Qwt/guiqwt/PyCall:
 <br><https://github.com/ma-laforge/EasyPlotQwt.jl>.
+ 1. **EDAData.jl** - Provides access to data formats used by EDA tools:
+<br><https://github.com/ma-laforge/EDAData.jl>.
+ 1. **CppSimData.jl** - Julia wrapper for 3rd party .tr0 reader:
+<br><https://github.com/ma-laforge/CppSimData.jl>.
  1. **FileIO2.jl** - "File Object"-Type Hierarchy:
 <br><https://github.com/ma-laforge/FileIO2.jl>.
 
