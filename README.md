@@ -31,6 +31,8 @@ The C-Data toolkit is implemented in the Julia Programming Language.
 
  1. [Install guiqwt](https://github.com/ma-laforge/HowTo/tree/master/guiqwt/guiqwt_install.md#Py27Installation) (Optional backend)
 
+ 1. [Install LibPSF](https://github.com/ma-laforge/LibPSF.jl) (Optional file reader)
+
  1. Install C-Data Julia modules (Please install modules in order shown below to avoid potential issues).
 
 		julia> Pkg.clone("https://github.com/ma-laforge/FileIO2.jl.git")
@@ -42,6 +44,9 @@ The C-Data toolkit is implemented in the Julia Programming Language.
 		julia> Pkg.clone("https://github.com/ma-laforge/EasyPlotQwt.jl.git")
 		julia> Pkg.clone("https://github.com/ma-laforge/EasyData.jl.git")
 		julia> Pkg.clone("https://github.com/ma-laforge/SignalProcessing.jl.git")
+		julia> Pkg.clone("https://github.com/ma-laforge/CppSimData.jl.git")
+		julia> Pkg.clone("https://github.com/ma-laforge/LibPSF.jl.git")
+		julia> Pkg.clone("https://github.com/ma-laforge/EDAData.jl.git")
 
 <a name="SampleUsage"></a>
 ## Sample Usage
@@ -101,6 +106,8 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 <br><https://github.com/ma-laforge/EDAData.jl>.
  1. **CppSimData.jl** - Julia wrapper for 3rd party .tr0 reader:
 <br><https://github.com/ma-laforge/CppSimData.jl>.
+ 1. **LibPSF.jl** - Julia wrapper for 3rd party .psf reader:
+<br><https://github.com/ma-laforge/LibPSF.jl>.
  1. **FileIO2.jl** - "File Object"-Type Hierarchy:
 <br><https://github.com/ma-laforge/FileIO2.jl>.
 
