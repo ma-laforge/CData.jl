@@ -29,35 +29,26 @@ The C-Data toolkit is implemented in the Julia Programming Language.
 
 			cacert=/etc/ssl/certs/ca-certificates.crt
 
- 1. [Install Anaconda distribution of Python 2.7](https://github.com/ma-laforge/HowTo/tree/master/conda/conda_install.md#Py27Installation)
+ 1. Optional: [Install Anaconda distribution of Python 2.7](https://github.com/ma-laforge/HowTo/tree/master/conda/conda_install.md#Py27Installation)
 
   - Anaconda is required if one is to render plots with Matplotlib/PyPlot.jl or Qwt/guiqwt.
 
- 1. [Install Grace](https://github.com/ma-laforge/HowTo/tree/master/grace/grace_install.md#Installation) (Optional backend)
+ 1. Install C-Data Julia modules (Prompts to install python/PyCall-based modules).
+
+		julia> Pkg.clone("https://github.com/ma-laforge/CData.jl.git")
+		julia> using CData
+		julia> CData.install()
+
+ 1. Optional backend: [Install Grace](https://github.com/ma-laforge/HowTo/tree/master/grace/grace_install.md#Installation)
 
   - The installation of Grace is probably the simplest amongst of all backends.
   - That being said, issues were found where GracePlot/Grace interactions cause certain Ubuntu installations to logout the user.  After further reading, the author believes this might have something to do with the X-server.  The issue could only be circumvented by running C-Data from a VMWare session running yet another Ubuntu installation.
 
- 1. [Install PyPlot](https://github.com/ma-laforge/HowTo/tree/master/julia/julia_install.md#PyPlot) (Optional backend)
+ 1. Optional backend: [Install PyPlot](https://github.com/ma-laforge/HowTo/tree/master/julia/julia_install.md#PyPlot)
 
- 1. [Install guiqwt](https://github.com/ma-laforge/HowTo/tree/master/guiqwt/guiqwt_install.md#Py27Installation) (Optional backend)
+ 1. Optional backend: [Install guiqwt](https://github.com/ma-laforge/HowTo/tree/master/guiqwt/guiqwt_install.md#Py27Installation)
 
- 1. [Install LibPSF](https://github.com/ma-laforge/LibPSF.jl) (Optional file reader)
-
- 1. Install C-Data Julia modules (Please install modules in order shown below to avoid potential issues).
-
-		julia> Pkg.clone("https://github.com/ma-laforge/FileIO2.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/MDDatasets.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/GracePlot.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/EasyPlot.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/EasyPlotGrace.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/EasyPlotMPL.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/EasyPlotQwt.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/EasyData.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/SignalProcessing.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/CppSimData.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/LibPSF.jl.git")
-		julia> Pkg.clone("https://github.com/ma-laforge/EDAData.jl.git")
+ 1. Optional file reader: [Build LibPSF](https://github.com/ma-laforge/LibPSF.jl)
 
 <a name="SampleUsage"></a>
 ## Sample Usage
