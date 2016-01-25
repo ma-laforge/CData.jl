@@ -49,9 +49,10 @@ function install()
 	const path_laforge = "git://github.com/ma-laforge"
 
 	modlist = [
-		"FileIO2", "MDDatasets", "GracePlot",
-		"EasyPlot", "EasyPlotGrace", "EasyData",
-		"SignalProcessing", "CppSimData", "LibPSF", "EDAData",
+		"FileIO2", "MDDatasets",
+		"GracePlot", "EasyPlot", "EasyPlotGrace", "EasyData",
+		"CircuitAnalysis", "SignalProcessing", "NetwAnalysis",
+      "CppSimData", "LibPSF", "EDAData",
 	]
 	cond_install_clone(path_laforge, modlist)
 
@@ -62,7 +63,7 @@ function install()
 		cond_install_clone(path_laforge, modlist)
 	end
 
-	println("\n\nPackage instalation complete.")
+	println("\n\nPackage installation complete.")
 	println("Refresh out-of-date packages using \"Pkg.update()\".")
 end
 

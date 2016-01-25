@@ -87,8 +87,12 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 
  1. **MDDatasets.jl** - Multi-dimensional datasets & operations:
 <br><https://github.com/ma-laforge/MDDatasets.jl>.
+ 1. **CircuitAnalysis.jl** - Basic circuit analysis tools.:
+<br><https://github.com/ma-laforge/CircuitAnalysis.jl>.
  1. **SignalProcessing.jl** - Step/pulse responses, Fourier transform/series, PRBS sequences, ...:
 <br><https://github.com/ma-laforge/SignalProcessing.jl>.
+ 1. **NetwAnalysis.jl** - S/Z/Y/H/G/ABCD parameters, ...:
+<br><https://github.com/ma-laforge/NetwAnalysis.jl>.
  1. **EasyPlot.jl** - Simple/Fast Plot Objects:
 <br><https://github.com/ma-laforge/EasyPlot.jl>.
  1. **EasyData.jl** - Simple/Fast(+HDF5) {data, plot} &hArr; file:
