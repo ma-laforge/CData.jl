@@ -52,7 +52,7 @@ function install()
 		"FileIO2", "MDDatasets",
 		"GracePlot", "EasyPlot", "EasyPlotGrace", "EasyData",
 		"CircuitAnalysis", "SignalProcessing", "NetwAnalysis",
-      "CppSimData", "LibPSF", "EDAData",
+      "CppSimData", "LibPSF", "LibPSF2", "PSFWrite", "EDAData",
 	]
 	cond_install_clone(path_laforge, modlist)
 

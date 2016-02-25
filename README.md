@@ -25,7 +25,7 @@ The C-Data toolkit is implemented in the Julia Programming Language.
 
 			sudo apt-get install curl
 
-  - If `curl` still causes issues, it might be necessary to add a `~/.curlrc` file with the following (ubuntu):
+  - If `curl` still causes issues, it might be necessary to add a `~/.curlrc` file with the following (Ubuntu):
 
 			cacert=/etc/ssl/certs/ca-certificates.crt
 
@@ -49,6 +49,7 @@ The C-Data toolkit is implemented in the Julia Programming Language.
  1. Optional backend: [Install guiqwt](https://github.com/ma-laforge/HowTo/tree/master/guiqwt/guiqwt_install.md#Py27Installation)
 
  1. Optional file reader: [Build LibPSF](https://github.com/ma-laforge/LibPSF.jl)
+  - **IMPORTANT:** By default, CData.jl uses LibPSF2.jl (pure-Julia implementation) instead of LibPSF.jl.  Compliation is therefore not required.
 
 <a name="SampleUsage"></a>
 ## Sample Usage
@@ -114,6 +115,10 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 <br><https://github.com/ma-laforge/CppSimData.jl>.
  1. **LibPSF.jl** - Julia wrapper for 3rd party .psf reader:
 <br><https://github.com/ma-laforge/LibPSF.jl>.
+ 1. **LibPSF2.jl** - Pure-Julia implementation of 3rd party .psf reader:
+<br><https://github.com/ma-laforge/LibPSF2.jl>.
+ 1. **PSFWrite.jl** - Pure-Julia .psf writer:
+<br><https://github.com/ma-laforge/PSFWrite.jl>.
  1. **FileIO2.jl** - "File Object"-Type Hierarchy:
 <br><https://github.com/ma-laforge/FileIO2.jl>.
 
@@ -123,7 +128,7 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 
 Extensive compatibility testing of the C-Data toolkit has not been performed.  The module has been tested using the following environment(s):
 
- - Linux / Julia-0.4.0 (64-bit) / Anaconda 2.1.0 (64-bit w/Python 2.7.8)
+ - Linux / Julia-0.4.2 (64-bit) / Anaconda 2.1.0 (64-bit w/Python 2.7.8)
 
 ## Disclaimer
 
