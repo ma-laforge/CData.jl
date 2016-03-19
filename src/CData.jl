@@ -49,8 +49,8 @@ function install()
 	const path_laforge = "git://github.com/ma-laforge"
 
 	modlist = [
-		"FileIO2", "MDDatasets",
-		"GracePlot", "EasyPlot", "EasyPlotGrace", "EasyData",
+		"FileIO2", "MDDatasets", "NumericIO",
+		"GracePlot", "EasyPlot", "EasyPlotGrace", "EasyPlotPlots", "EasyData",
 		"CircuitAnalysis", "SignalProcessing", "NetwAnalysis",
       "CppSimData", "LibPSF", "LibPSF2", "PSFWrite", "EDAData",
 	]
