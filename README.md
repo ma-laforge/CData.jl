@@ -6,6 +6,15 @@
 
 CData.jl (C-Data) provides a collection of tools to simplify the analysis of large multi-dimensional datasets & better visualize (*see*) mathematical relationships buried within.
 
+In other words, the goal is to provide analysis tools that lead to minimal code, written in a *natural*, and *readable* fashion.  In particular, the tools will help perform the following operations:
+
+ 1. Read in complex multi-dimensional input data.
+ 1. Perform the same operation on all elements (usually) without having to write explicit loops.
+ 1. Quickly organize and plot the results in a way that sheds light on the studied phenomenon.
+ 1. Save data and plot configuration to a single .hdf5 file.
+ 1. Reload plot data for further investigation at a later time.
+ 1. Render plots using different plotting backends (possibly at a later date).
+
 The C-Data toolkit was initially designed to assist with circuit-data (C-Data) analysis.  That being said, C-Data provides a generic toolkit that can also be applied to other scientific fields.
 
 The C-Data toolkit is implemented in the Julia Programming Language.
@@ -15,6 +24,7 @@ The C-Data toolkit is implemented in the Julia Programming Language.
  - **Grace/xmgrace**: Short load times.  Fastest solution when dealing with small datasets.
  - **Matplotlib/PyPlot.jl**: Longer load times (loading anaconda).  Faster than Grace/xmgrace solution when dealing with larger datasets.
  - **Qwt/guiqwt**: Longer load times (loading anaconda).  Faster than Matplotlib/PyPlot.jl solution when dealing with larger datasets.
+  - guiqwt appears slow when plotting a large *number of traces* (ex: eye diagram of a long transient dataset split into many individual traces).
  - **Plots.jl/(\*.jl)**: Uniform plotting interface supporting multiple backends.  In particular, there are signs that GR.jl will potentially be one of the fastest.
   - The GR.jl backend is not yet mature: Does not support subplots, cannot display multiple plot windows, ...
 
