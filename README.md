@@ -98,13 +98,17 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 <br><https://github.com/ma-laforge/SignalProcessing.jl>.
  1. **NetwAnalysis.jl** - S/Z/Y/H/G/ABCD parameters, ...:
 <br><https://github.com/ma-laforge/NetwAnalysis.jl>.
- 1. **EasyPlot.jl** - Simple/Fast Plot Objects:
+ 1. **EasyPlot.jl** - Generic plot objects with simple/succinct build interface:
 <br><https://github.com/ma-laforge/EasyPlot.jl>.
- 1. **EasyData.jl** - Simple/Fast(+HDF5) {data, plot} &hArr; file:
+ 1. **EasyData.jl** - Simple/fast(+HDF5) {data, plot} &hArr; file:
 <br><https://github.com/ma-laforge/EasyData.jl>.
+ 1. **EDAData.jl** - Access/manipulate data used by EDA tools:
+<br><https://github.com/ma-laforge/EDAData.jl>.
 
 **Documentation for Secondary Modules**
 
+ 1. **FileIO2.jl** - "File Object"-Type Hierarchy:
+<br><https://github.com/ma-laforge/FileIO2.jl>.
  1. **GracePlot.jl** - Publication-quality plotting for Julia using Grace/xmgrace:
 <br><https://github.com/ma-laforge/GracePlot.jl>.
  1. **EasyPlotGrace.jl** - Implements EasyPlot.jl rendering interface using Grace/xmgrace:
@@ -115,18 +119,12 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 <br><https://github.com/ma-laforge/EasyPlotQwt.jl>.
  1. **EasyPlotPlots.jl** - Implements EasyPlot.jl rendering interface using Plots.jl/(\*.jl):
 <br><https://github.com/ma-laforge/EasyPlotPlots.jl>.
- 1. **EDAData.jl** - Provides access to data formats used by EDA tools:
-<br><https://github.com/ma-laforge/EDAData.jl>.
- 1. **CppSimData.jl** - Julia wrapper for 3rd party .tr0 reader:
-<br><https://github.com/ma-laforge/CppSimData.jl>.
- 1. **LibPSF.jl** - Julia wrapper for 3rd party .psf reader:
-<br><https://github.com/ma-laforge/LibPSF.jl>.
+ 1. **SpiceData.jl** - Pure-Julia SPICE data file reader:
+<br><https://github.com/ma-laforge/SpiceData.jl>.
  1. **LibPSF2.jl** - Pure-Julia implementation of 3rd party .psf reader:
 <br><https://github.com/ma-laforge/LibPSF2.jl>.
  1. **PSFWrite.jl** - Pure-Julia .psf writer:
 <br><https://github.com/ma-laforge/PSFWrite.jl>.
- 1. **FileIO2.jl** - "File Object"-Type Hierarchy:
-<br><https://github.com/ma-laforge/FileIO2.jl>.
 
 ## Known Limitations
 
