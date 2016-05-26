@@ -21,9 +21,12 @@ The C-Data toolkit is implemented in the Julia Programming Language.
 
 ### Supported Plotting Backends
 
- - **Grace/xmgrace**: Short load times.  Fastest solution when dealing with small datasets.
- - **Matplotlib/PyPlot.jl**: Longer load times (loading anaconda).  Faster than Grace/xmgrace solution when dealing with larger datasets.
- - **Qwt/guiqwt**: Longer load times (loading anaconda).  Faster than Matplotlib/PyPlot.jl solution when dealing with larger datasets.
+NOTE: The term "load time" is used loosely below to indicate time to first plot.
+
+ - **InspectDR.jl**: One of the fastest solutions with the shortest load times.  InspectDR also provides basic interactivity, but is relatively new/untested, and has fewer features than other backends (ex: Matplotlib).
+ - **Grace/xmgrace**: Short load times and fast when dealing with small datasets.  The GUI feels a bit dated and unfamiliar, but one can readily fine tune almost any visual element to generate publication-quality plots.
+ - **Matplotlib/PyPlot.jl**: Longer load times (loading anaconda).  Faster than Grace/xmgrace solution when dealing with moderately-sized datasets (~200k points).
+ - **Qwt/guiqwt**: Longer load times (loading anaconda).  Faster than Matplotlib/PyPlot.jl solution when dealing with moderately-sized datasets (~200k points).
   - guiqwt appears slow when plotting a large *number of traces* (ex: eye diagram of a long transient dataset split into many individual traces).
  - **Plots.jl/(\*.jl)**: Uniform plotting interface supporting multiple backends.  In particular, there are signs that GR.jl will potentially be one of the fastest.
   - The GR.jl backend is not yet mature: Does not support subplots, cannot display multiple plot windows, ...
@@ -109,8 +112,12 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 
  1. **FileIO2.jl** - "File Object"-Type Hierarchy:
 <br><https://github.com/ma-laforge/FileIO2.jl>.
+ 1. **InspectDR.jl** - Efficient/interactive Julia/Gtk plots:
+<br><https://github.com/ma-laforge/InspectDR.jl>.
  1. **GracePlot.jl** - Publication-quality plotting for Julia using Grace/xmgrace:
 <br><https://github.com/ma-laforge/GracePlot.jl>.
+ 1. **EasyPlotInspect.jl** - Implements EasyPlot.jl rendering Interface using InspectDR.jl:
+<br><https://github.com/ma-laforge/EasyPlotInspect.jl>.
  1. **EasyPlotGrace.jl** - Implements EasyPlot.jl rendering interface using Grace/xmgrace:
 <br><https://github.com/ma-laforge/EasyPlotGrace.jl>.
  1. **EasyPlotMPL.jl** - Implements EasyPlot.jl rendering interface using Matplotlib/PyPlot/PyCall:
@@ -127,6 +134,10 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 <br><https://github.com/ma-laforge/PSFWrite.jl>.
 
 ## Known Limitations
+
+The C-Data module is always tracking master branches, making it a relatively unstable platform for development.  This is particularly true when changes are made to the programming interface.
+
+Although `NumericIO` and `InspectDR` are registered modules (can be added with `Pkg.add(...)`), the `CData` installation pulls them in using `Pkg.clone(...)`.  In theory, this ensures no modules are left with an incompatible version.
 
 ### Compatibility
 

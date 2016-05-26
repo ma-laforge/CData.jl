@@ -50,7 +50,8 @@ function install()
 
 	modlist = [
 		"FileIO2", "MDDatasets", "NumericIO",
-		"GracePlot", "EasyPlot", "EasyPlotGrace", "EasyPlotPlots", "EasyData",
+		"InspectDR", "GracePlot",
+		"EasyPlot", "EasyPlotInspect", "EasyPlotGrace", "EasyPlotPlots", "EasyData",
 		"CircuitAnalysis", "SignalProcessing", "NetwAnalysis",
       "CppSimData", "SpiceData", "LibPSF", "LibPSF2", "PSFWrite", "EDAData",
 	]
