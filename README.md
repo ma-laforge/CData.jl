@@ -2,6 +2,8 @@
 
 "Focus on the analysis itself, not data manipulation"
 
+Sample Outputs: [SignalProcessing.jl](https://github.com/ma-laforge/FileRepo/tree/master/SignalProcessing/sampleplots/README.md), (might be out of date).
+
 ## Description
 
 CData.jl (C-Data) provides a collection of tools to simplify the analysis of large multi-dimensional datasets & better visualize (*see*) mathematical relationships buried within.
