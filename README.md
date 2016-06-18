@@ -130,8 +130,8 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 <br><https://github.com/ma-laforge/EasyPlotPlots.jl>.
  1. **SpiceData.jl** - Pure-Julia SPICE data file reader:
 <br><https://github.com/ma-laforge/SpiceData.jl>.
- 1. **LibPSF2.jl** - Pure-Julia implementation of 3rd party .psf reader:
-<br><https://github.com/ma-laforge/LibPSF2.jl>.
+ 1. **LibPSF.jl** - Pure-Julia implementation of 3rd party .psf reader:
+<br><https://github.com/ma-laforge/LibPSF.jl>.
  1. **PSFWrite.jl** - Pure-Julia .psf writer:
 <br><https://github.com/ma-laforge/PSFWrite.jl>.
 

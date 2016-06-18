@@ -53,9 +53,9 @@ function install()
 		"InspectDR", "GracePlot",
 		"EasyPlot", "EasyPlotInspect", "EasyPlotGrace", "EasyPlotPlots", "EasyData",
 		"CircuitAnalysis", "SignalProcessing", "NetwAnalysis",
-      "CppSimData", "SpiceData", "LibPSF", "LibPSF2", "PSFWrite", "EDAData",
+      "CppSimData", "SpiceData", "LibPSFC", "LibPSF", "PSFWrite", "EDAData",
 	]
-	#NOTE: install CppSimData/LibPSF for sample data files only.
+	#NOTE: install CppSimData/LibPSFC for sample data files only.
 	cond_install_clone(path_laforge, modlist)
 
 	if "Y" == uppercase(input(AbstractString, "Install PyPlot/PyCall dependencies (y/n)?", "y"))
