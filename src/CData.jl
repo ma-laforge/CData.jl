@@ -15,13 +15,12 @@ function input{T}(::Type{T}, prompt::AbstractString, default)
 end
 
 function isinstalled(modname::AbstractString)
-	result = true
 	try
-		Pkg.installed(modname)
-	catch
-		result = false
+		if Pkg.installed(modname) != nothing
+			return true
+		end
 	end
-	return result
+	return false
 end
 
 #Install module using Pkg.clone(), if not installed:
