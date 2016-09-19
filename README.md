@@ -1,8 +1,10 @@
+# :art: Galleries (Sample Output) :art:
+
+[:satellite: SignalProcessing.jl](https://github.com/ma-laforge/FileRepo/tree/master/SignalProcessing/sampleplots/README.md), [:chart_with_upwards_trend: InspectDR.jl](https://github.com/ma-laforge/FileRepo/tree/master/InspectDR/sampleplots/README.md) (might be out of date).
+
 # CData.jl: (C-Data) Analysis/Visualization Suite
 
 "Focus on the analysis itself, not data manipulation"
-
-Sample Output Galleries: [SignalProcessing.jl](https://github.com/ma-laforge/FileRepo/tree/master/SignalProcessing/sampleplots/README.md), [InspectDR.jl](https://github.com/ma-laforge/FileRepo/tree/master/InspectDR/sampleplots/README.md) (might be out of date).
 
 ## Description
 
@@ -66,7 +68,7 @@ NOTE: The term "load time" is used loosely below to indicate time to first plot.
 <a name="SampleUsage"></a>
 ## Sample Usage
 
-**Galleries:** [SignalProcessing.jl](https://github.com/ma-laforge/FileRepo/tree/master/SignalProcessing/sampleplots/README.md), [InspectDR.jl](https://github.com/ma-laforge/FileRepo/tree/master/InspectDR/sampleplots/README.md) (might be out of date).
+:art: **Galleries:** [:satellite: SignalProcessing.jl](https://github.com/ma-laforge/FileRepo/tree/master/SignalProcessing/sampleplots/README.md), [:chart_with_upwards_trend: InspectDR.jl](https://github.com/ma-laforge/FileRepo/tree/master/InspectDR/sampleplots/README.md) (might be out of date).
 
 Examples demonstrating the capabilities of the C-Data toolkit are provided by the following modules:
 
