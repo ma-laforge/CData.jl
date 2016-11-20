@@ -1,3 +1,7 @@
+# :heavy_exclamation_mark: Build Broken
+
+Build likely broken as of 2016 11 20 due to Julia v0.4 &rArr; v0.5 migration.  Suggest checking out version from 2016 11 15 of submodules to use with Julia v0.4.
+
 # :art: Galleries (Sample Output) :art:
 
 [:satellite: SignalProcessing.jl](https://github.com/ma-laforge/FileRepo/tree/master/SignalProcessing/sampleplots/README.md), [:chart_with_upwards_trend: InspectDR.jl](https://github.com/ma-laforge/FileRepo/tree/master/InspectDR/sampleplots/README.md) (might be out of date).
