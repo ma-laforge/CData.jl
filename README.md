@@ -1,7 +1,3 @@
-# :heavy_exclamation_mark: Build Broken
-
-Build likely broken as of 2016 11 20 due to Julia v0.4 &rArr; v0.5 migration.  Suggest checking out version from 2016 11 15 of submodules to use with Julia v0.4.
-
 # :art: Galleries (Sample Output) :art:
 
 [:satellite: SignalProcessing.jl](https://github.com/ma-laforge/FileRepo/tree/master/SignalProcessing/sampleplots/README.md), [:chart_with_upwards_trend: InspectDR.jl](https://github.com/ma-laforge/FileRepo/tree/master/InspectDR/sampleplots/README.md) (might be out of date).
@@ -145,11 +141,18 @@ The C-Data module is always tracking master branches, making it a relatively uns
 
 Although `NumericIO` and `InspectDR` are registered modules (can be added with `Pkg.add(...)`), the `CData` installation pulls them in using `Pkg.clone(...)`.  In theory, this ensures no modules are left with an incompatible version.
 
+### Backwards Compatibility
+
+The C-Data suite does not currently provide backwards compatibility for previous versions of Julia.  To use C-Data with older Julia distributions, the user *must* check out older versions of each submodule:
+
+ - **Julia-0.4**: Check out version from November 15 2016 (2016 11 15).
+  - Tested configuration: Linux / Julia-0.4.5 (64-bit) / Anaconda 2.1.0 (64-bit w/Python 2.7.11)
+
 ### Compatibility
 
 Extensive compatibility testing of the C-Data toolkit has not been performed.  The module has been tested using the following environment(s):
 
- - Linux / Julia-0.4.5 (64-bit) / Anaconda 2.1.0 (64-bit w/Python 2.7.11)
+ - Linux / Julia-0.5.0 (64-bit) / Anaconda 2.1.0 (64-bit w/Python 2.7.11)
 
 ## Disclaimer
 
