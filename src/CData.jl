@@ -1,10 +1,10 @@
 #Dummy module used to install C-Data suite
 module CData
 
-parsestring(::Type{AbstractString}, s::AbstractString) = s
-parsestring{T}(::Type{T}, s::AbstractString) = parse(T, s)
+parsestring(::Type{String}, s::String) = s
+parsestring{T}(::Type{T}, s::String) = parse(T, s)
 
-function input{T}(::Type{T}, prompt::AbstractString, default)
+function input{T}(::Type{T}, prompt::String, default)
 	println(prompt)
 	print("[$default]: ")
 	result = parsestring(T, strip(readline(STDIN)))
@@ -14,7 +14,7 @@ function input{T}(::Type{T}, prompt::AbstractString, default)
 	return result
 end
 
-function isinstalled(modname::AbstractString)
+function isinstalled(modname::String)
 	try
 		if Pkg.installed(modname) != nothing
 			return true
@@ -24,7 +24,7 @@ function isinstalled(modname::AbstractString)
 end
 
 #Install module using Pkg.clone(), if not installed:
-function cond_install_clone(path::AbstractString, modname::AbstractString; jl_suffix::Bool = true)
+function cond_install_clone(path::String, modname::String; jl_suffix::Bool = true)
 	suffix = jl_suffix? ".jl.git": ""
 	println("\nInstalling module $modname...")
 
@@ -38,7 +38,7 @@ function cond_install_clone(path::AbstractString, modname::AbstractString; jl_su
 end
 
 #Vectorize cond_install_clone:
-function cond_install_clone(path::AbstractString, v::Vector; jl_suffix::Bool = true)
+function cond_install_clone(path::String, v::Vector; jl_suffix::Bool = true)
 	for modname in v
 		cond_install_clone(path, modname, jl_suffix=jl_suffix)
 	end
@@ -57,7 +57,7 @@ function install()
 	#NOTE: install CppSimData/LibPSFC for sample data files only.
 	cond_install_clone(path_laforge, modlist)
 
-	if "Y" == uppercase(input(AbstractString, "Install PyPlot/PyCall dependencies (y/n)?", "y"))
+	if "Y" == uppercase(input(String, "Install PyPlot/PyCall dependencies (y/n)?", "y"))
 		modlist = [
 			"EasyPlotMPL", "EasyPlotQwt"
 		]
