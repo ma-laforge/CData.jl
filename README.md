@@ -6,6 +6,12 @@
 
 "Focus on the analysis itself, not data manipulation"
 
+| <img src="https://github.com/ma-laforge/FileRepo/blob/master/InspectDR/sampleplots/demo11.png" width="425"> | <img src="https://github.com/ma-laforge/FileRepo/blob/master/InspectDR/sampleplots/demo2.png" width="425"> |
+| :---: | :---: |
+
+| <img src="https://github.com/ma-laforge/FileRepo/blob/master/SignalProcessing/sampleplots/demo15.png" width="850"> |
+| :---: |
+
 ## Description
 
 CData.jl (C-Data) provides a collection of tools to simplify the analysis of large multi-dimensional datasets & better visualize (*see*) mathematical relationships buried within.
