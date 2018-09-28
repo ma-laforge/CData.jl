@@ -28,7 +28,7 @@ function cond_install_clone(path::String, modname::String; jl_suffix::Bool = tru
 		println("        already present.")
 	else
 		pkgpath = joinpath(path, "$modname$suffix")
-		Pkg.clone(pkgpath)
+		pkg"add $pkgpath"
 		println("done.")
 	end
 end

@@ -58,7 +58,7 @@ NOTE: The term "load time" is used loosely below to indicate time to first plot.
 
 1. Install C-Data Julia modules (Prompts to install python/PyCall-based modules).
 
-		julia> Pkg.clone("https://github.com/ma-laforge/CData.jl.git")
+		julia> pkg"add https://github.com/ma-laforge/CData.jl.git"
 		julia> using CData
 		julia> CData.install()
 
@@ -80,11 +80,11 @@ Examples demonstrating the capabilities of the C-Data toolkit are provided by th
 
 1. [SignalProcessing.jl](https://github.com/ma-laforge/SignalProcessing.jl): [sample code](https://github.com/ma-laforge/SignalProcessing.jl/tree/master/sample).
 
- 		julia> include(joinpath(Pkg.dir(), "SignalProcessing/sample/runsamples.jl"))
+ 		julia> using SignalProcessing; include(joinpath(dirname(pathof(SignalProcessing)), "../sample/runsamples.jl"))
 
 1. [NetwAnalysis.jl](https://github.com/ma-laforge/NetwAnalysis.jl): [sample code](https://github.com/ma-laforge/NetwAnalysis.jl/tree/master/sample).
 
- 		julia> include(joinpath(Pkg.dir(), "NetwAnalysis/sample/runsamples.jl"))
+ 		julia> using NetwAnalysis; include(joinpath(dirname(pathof(NetwAnalysis)), "../sample/runsamples.jl"))
 
 By default, runsamples.jl will render plots using the `InspectDR` backend.  To change the default backend, set the `EASYPLOT_DEFAULTDISPLAY` environment variable, as described in [EasyPlot.jl](https://github.com/ma-laforge/EasyPlot.jl).
 
@@ -92,7 +92,7 @@ By default, runsamples.jl will render plots using the `InspectDR` backend.  To c
 
 1. [InspectDR.jl](https://github.com/ma-laforge/InspectDR.jl): [sample code](https://github.com/ma-laforge/InspectDR.jl/tree/master/sample).
 
- 		julia> include(joinpath(Pkg.dir(), "InspectDR/sample/runsamples.jl"))
+ 		julia> using InspectDR; include(joinpath(dirname(pathof(InspectDR)), "../sample/runsamples.jl"))
 
 
 ## Documentation
@@ -145,7 +145,7 @@ Documentation is limited at the moment.  See Github pages of corresponding modul
 
 The C-Data module is always tracking master branches, making it a relatively unstable platform for development.  This is particularly true when changes are made to the programming interface.
 
-Although `NumericIO` and `InspectDR` are registered modules (can be added with `Pkg.add(...)`), the `CData` installation pulls them in using `Pkg.clone(...)`.  In theory, this ensures no modules are left with an incompatible version.
+Although {`NumericIO`, `InspectDR`, `MDDatasets`, `SpiceData`, `LibPSF`, `PSFWrite`} are registered modules (can be added with `] add MODULENAME`), the `CData` installation pulls the development branch of their respective .git repositories.  In theory, this ensures no modules are left with an incompatible version during the devlopment process.
 
 ### Backwards Compatibility
 
