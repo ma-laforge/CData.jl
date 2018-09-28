@@ -156,13 +156,13 @@ The C-Data suite does not currently provide backwards compatibility for previous
 - **Julia-0.5**: Check out version from May 12th 2017 (2017 05 12).
   - Tested configuration: Linux / Julia-0.5.1 (64-bit) / Anaconda 2.1.0 (64-bit w/Python 2.7.11)
 - **Julia-0.6**: Check out version from Aug 1st 2018 (2018 08 01).
-  - Tested configuration: Linux / Julia-0.6.0 (64-bit) / Anaconda 2.1.0 (64-bit w/Python 2.7.11)
+  - Tested configuration: Linux / Julia-0.6.0 (64-bit)
 
 ### Compatibility
 
 Extensive compatibility testing of the C-Data toolkit has not been performed.  The module has been tested using the following environment(s):
 
-- Linux / Julia-0.6.0 (64-bit) / Anaconda 2.1.0 (64-bit w/Python 2.7.11)
+- Windows / Linux / Julia-0.7.0 (64-bit)
 
 ## Disclaimer
 

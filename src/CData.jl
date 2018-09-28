@@ -1,13 +1,14 @@
 #Dummy module used to install C-Data suite
 module CData
+using Pkg
 
-parsestring(::Type{String}, s::String) = s
-parsestring{T}(::Type{T}, s::String) = parse(T, s)
+parsestring(::Type{String}, s::AbstractString) = s
+parsestring(::Type{T}, s::AbstractString) where T = parse(T, s)
 
-function input{T}(::Type{T}, prompt::String, default)
+function input(::Type{T}, prompt::String, default) where T
 	println(prompt)
 	print("[$default]: ")
-	result = parsestring(T, strip(readline(STDIN)))
+	result = parsestring(T, strip(readline(stdin)))
 	if "" == result
 		result = default
 	end
@@ -15,17 +16,12 @@ function input{T}(::Type{T}, prompt::String, default)
 end
 
 function isinstalled(modname::String)
-	try
-		if Pkg.installed(modname) != nothing
-			return true
-		end
-	end
-	return false
+	return in(modname, keys(Pkg.installed()))
 end
 
 #Install module using Pkg.clone(), if not installed:
 function cond_install_clone(path::String, modname::String; jl_suffix::Bool = true)
-	suffix = jl_suffix? ".jl.git": ""
+	suffix = jl_suffix ? ".jl.git" : ""
 	println("\nInstalling module $modname...")
 
 	if isinstalled(modname)
@@ -45,21 +41,21 @@ function cond_install_clone(path::String, v::Vector; jl_suffix::Bool = true)
 end
 
 function install()
-	const path_laforge = "git://github.com/ma-laforge"
+	path_laforge = "git://github.com/ma-laforge" #WANTCONST
 
 	modlist = [
 		"FileIO2", "MDDatasets", "NumericIO",
 		"InspectDR", "GracePlot",
-		"EasyPlot", "EasyPlotInspect", "EasyPlotGrace", "EasyPlotPlots", "EasyData",
+		"EasyPlot", "EasyData", "EasyPlotInspect", "EasyPlotGrace", #"EasyPlotPlots", #Not working
 		"CircuitAnalysis", "SignalProcessing", "NetwAnalysis",
-      "CppSimData", "SpiceData", "LibPSFC", "LibPSF", "PSFWrite", "EDAData",
+      "SpiceData", "LibPSF", "PSFWrite", "EDAData",
+		"CppSimData", "LibPSFC", #NOTE: install CppSimData/LibPSFC for sample data files only.
 	]
-	#NOTE: install CppSimData/LibPSFC for sample data files only.
 	cond_install_clone(path_laforge, modlist)
 
 	if "Y" == uppercase(input(String, "Install PyPlot/PyCall dependencies (y/n)?", "y"))
 		modlist = [
-			"EasyPlotMPL", "EasyPlotQwt"
+			"EasyPlotMPL", #"EasyPlotQwt" #Not working
 		]
 		cond_install_clone(path_laforge, modlist)
 	end
