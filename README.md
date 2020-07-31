@@ -1,3 +1,16 @@
+# CData.jl: Deprecation Warning
+
+C-Data tool suite is now deprecated. Please use [CMDimCircuits.jl](https://github.com/ma-laforge/CMDimCircuits.jl) instead:
+```
+]add CMDimCircuits
+```
+
+[CMDimData.jl](https://github.com/ma-laforge/CMDimData.jl) & [CMDimCircuits.jl](https://github.com/ma-laforge/CMDimCircuits.jl) now provide the functionality that used to be scattered in the following packages:
+ - EasyPlot\*.jl, EasyData.jl
+ - CircuitAnalysis.jl, NetwAnalysis.jl, EDAData.jl, SignalProcessing.jl.
+
+I will be deleting these deprecated repositories to reduce clutter.  None of them were registered with the Julia registries.
+
 # :art: Galleries (Sample Output) :art:
 
 [:satellite: SignalProcessing.jl](https://github.com/ma-laforge/FileRepo/tree/master/SignalProcessing/sampleplots/README.md), [:chart_with_upwards_trend: InspectDR.jl](https://github.com/ma-laforge/FileRepo/tree/master/InspectDR/sampleplots/README.md) (might be out of date).
